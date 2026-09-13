@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* Single source of truth for the brand gradient (orange -> pink -> violet).
+     Used for: brand name, hero heading highlight, primary buttons.
+     To re-theme the whole site, change bg-brand-gradient in tailwind.config.js */
+  .brand-gradient-text {
+    @apply bg-brand-gradient bg-clip-text text-transparent;
+  }
+  .brand-gradient-bg {
+    @apply bg-brand-gradient text-white;
+  }
+}
+
+body {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
